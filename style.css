@@ -13,6 +13,12 @@
   h1 {
       letter-spacing: -1px;
   }
+
+  .logo {
+    width: 30px; 
+    height: 30px; 
+}
+
   a {
     color: #5469d4;
     text-decoration: unset;
@@ -197,7 +203,8 @@
   }
   
   .animationRightLeft {
-    animation: animationRightLeft 2s ease-in-out infinite;
+    animation: animationRightLeft 
+    2s ease-in-out infinite;
   }
   .animationLeftRight {
     animation: animationLeftRight 2s ease-in-out infinite;

@@ -8,15 +8,16 @@
 <body>
 
     <?php
-    $servername = "localhost";
+    $servername = "127.0.0.1";
     $username = "root";
     $password = "";
+    $port = "3308";
 
     $error_msg = "";
     $msg_co = "";
 
     try {
-        $bdd = new PDO("mysql:host=$servername;dbname=utilisateurs", $username, $password);
+        $bdd = new PDO("mysql:host=$servername;port=$port;dbname=utilisateurs", $username, $password);
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
         echo "Erreur : " . $e->getMessage();
@@ -86,7 +87,7 @@
             </div>
             <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
                 <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-                <h1><a href="" rel="dofollow">Connexion</a></h1>
+                <a href=""> <img src="/logo.png" alt="logo" class="logo"> </a>
                 </div>
                 <div class="formbg-outer">
                 <div class="formbg">
