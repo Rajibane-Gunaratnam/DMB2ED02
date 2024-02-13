@@ -1,11 +1,12 @@
 <?php
 
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "";
+$port = "3308";
 
 try{
-    $bdd = new PDO("mysql:host=$servername;dbname=utilisateurs", $username, $password);
+    $bdd = new PDO("mysql:host=$servername;port=$port;dbname=utilisateurs", $username, $password);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //echo "Connexion réussie !";
 }
@@ -40,4 +41,4 @@ if (isset($_POST['ok'])) {
     }
 }
 
-?>
+?> 
